@@ -1,17 +1,15 @@
-﻿import React, { useEffect } from "react";
+﻿import React from "react";
 import ButtonsList from "./ButtonsList";
 import VideoContainer from "./VideoContainer";
 import usePopularVideos from "../hooks/usePopularVideos";
 import { useDispatch } from "react-redux";
 import { openToggleMenu } from "../utils/appSlice";
+import { clearVideoDetails } from "../utils/videosSlice";
 
 const MainContainer = () => {
   const dispatcher = useDispatch();
   dispatcher(openToggleMenu());
-
-  useEffect(() => {
-    dispatcher(openToggleMenu());
-  }, []);
+  dispatcher(clearVideoDetails());
 
   usePopularVideos();
 
