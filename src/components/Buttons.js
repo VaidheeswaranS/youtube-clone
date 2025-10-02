@@ -2,7 +2,7 @@
 
 const Buttons = ({ name }) => {
   return (
-    <div className="px-4 py-2 mx-2 bg-gray-200 rounded-lg cursor-pointer">
+    <div className="px-4 py-1 mx-2 bg-gray-200 rounded-lg cursor-pointer">
       {name}
     </div>
   );
