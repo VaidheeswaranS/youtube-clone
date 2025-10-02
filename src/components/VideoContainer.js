@@ -10,7 +10,7 @@ const VideoContainer = () => {
     popularVideos && (
       <div className="flex flex-row flex-wrap">
         {popularVideos.map((video) => (
-          <Link to={"/watch?v=" + video.id}>
+          <Link to={"/watch?v=" + video.id} key={video.id}>
             <VideoCard key={video.id} info={video} />
           </Link>
         ))}

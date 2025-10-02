@@ -6,6 +6,7 @@ import { openToggleMenu } from "../utils/appSlice";
 
 const Body = () => {
   const dispatcher = useDispatch();
+  dispatcher(openToggleMenu());
 
   useEffect(() => {
     dispatcher(openToggleMenu());

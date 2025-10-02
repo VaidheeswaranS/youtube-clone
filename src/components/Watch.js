@@ -1,6 +1,6 @@
 ﻿import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { closeToggleMenu, toggleMenuItems } from "../utils/appSlice";
+import { closeToggleMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 
 const Watch = () => {
@@ -9,7 +9,7 @@ const Watch = () => {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    dispatcher(toggleMenuItems());
+    dispatcher(closeToggleMenu());
   }, []);
 
   return (
