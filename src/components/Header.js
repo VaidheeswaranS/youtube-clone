@@ -1,13 +1,22 @@
 ﻿import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleMenuItems } from "../utils/appSlice";
 
 const Header = () => {
+  const disptacher = useDispatch();
+
+  const handleMenuItems = () => {
+    disptacher(toggleMenuItems());
+  };
+
   return (
     <div>
       <div className="main-header flex flex-row items-center justify-between mt-2 mb-4">
         <div className="left-side-header flex flex-row items-center">
           <div className="hamburger-container">
             <img
-              className="hamburger-menu w-16 mr-3"
+              className="hamburger-menu w-16 mr-3 cursor-pointer"
+              onClick={() => handleMenuItems()}
               src="https://img.favpng.com/6/7/20/computer-icons-hamburger-button-icon-design-web-typography-png-favpng-WCdfkJA1mmcy54pnSwS9bffjG.jpg"
               alt="hamburger-menu"
             />
