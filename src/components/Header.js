@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenuItems } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const disptacher = useDispatch();
@@ -23,7 +24,7 @@ const Header = () => {
           </div>
           <div className="logo-container">
             <img
-              className="logo w-24"
+              className="logo w-24 cursor-pointer"
               src="https://logos-world.net/wp-content/uploads/2020/06/YouTube-Logo.png"
               alt="youtube-logo"
             />

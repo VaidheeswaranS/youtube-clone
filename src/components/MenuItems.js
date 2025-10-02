@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const MenuItems = () => {
   const toggleMenu = useSelector((store) => store.app?.isMenuOpen);
@@ -8,16 +9,18 @@ const MenuItems = () => {
     <div className="main-sidebar w-[230px] ml-3">
       {!toggleMenu ? (
         <div className="mini-sidebar">
-          <div className="home-mini-sidebar-container flex flex-col items-start justify-center mb-5">
-            <img
-              className="mr-4"
-              src="https://img.icons8.com/material-rounded/24/home.png"
-              alt="home-icon"
-            />
-            <p>Home</p>
-          </div>
+          <Link to="/">
+            <div className="home-mini-sidebar-container flex flex-col items-start justify-center">
+              <img
+                className="mr-4"
+                src="https://img.icons8.com/material-rounded/24/home.png"
+                alt="home-icon"
+              />
+              <p>Home</p>
+            </div>
+          </Link>
 
-          <div className="shorts-mini-sidebar-container flex flex-col items-start justify-center mb-5">
+          <div className="shorts-mini-sidebar-container flex flex-col items-start justify-center">
             <img
               className="mr-4"
               src="https://img.icons8.com/forma-regular/24/youtube-shorts.png"
@@ -26,7 +29,7 @@ const MenuItems = () => {
             <p>Shorts</p>
           </div>
 
-          <div className="subscriptions-mini-sidebar-container flex flex-col items-start justify-center mb-5">
+          <div className="subscriptions-mini-sidebar-container flex flex-col items-start justify-center">
             <img
               className="mr-4"
               src="https://img.icons8.com/material-outlined/24/video-playlist.png"
@@ -35,7 +38,7 @@ const MenuItems = () => {
             <p>Subscription</p>
           </div>
 
-          <div className="you-mini-sidebar-container flex flex-col items-start justify-center mb-5">
+          <div className="you-mini-sidebar-container flex flex-col items-start justify-center">
             <img
               className="mr-4"
               src="https://img.icons8.com/material-rounded/24/user.png"
@@ -44,7 +47,7 @@ const MenuItems = () => {
             <p>You</p>
           </div>
 
-          <div className="downloads-mini-sidebar-container flex flex-col items-start justify-center mb-5">
+          <div className="downloads-mini-sidebar-container flex flex-col items-start justify-center">
             <img
               className="mr-4"
               src="https://img.icons8.com/material-outlined/24/downloads.png"
@@ -56,14 +59,16 @@ const MenuItems = () => {
       ) : (
         <div className="full-sidebar">
           <div className="home-shorts-subscription-container border-b">
-            <div className="home-container flex flex-row items-center mb-3">
-              <img
-                className="mr-4"
-                src="https://img.icons8.com/material-rounded/24/home.png"
-                alt="home-icon"
-              />
-              <p>Home</p>
-            </div>
+            <Link to="/">
+              <div className="home-container flex flex-row items-center mb-3">
+                <img
+                  className="mr-4"
+                  src="https://img.icons8.com/material-rounded/24/home.png"
+                  alt="home-icon"
+                />
+                <p>Home</p>
+              </div>
+            </Link>
 
             <div className="shorts-container flex flex-row items-center mb-3">
               <img

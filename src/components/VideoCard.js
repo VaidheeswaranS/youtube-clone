@@ -29,7 +29,7 @@ const VideoCard = ({ info }) => {
           </p>
           <div className="views-published-container flex flex-row text-gray-600 text-sm mb-1">
             <div className="view-count mr-2">
-              {formatViewCount(viewCount)}K views •{" "}
+              {formatViewCount(viewCount)} views •{" "}
             </div>
             <div className="published-date">
               {formatPublishedTime(publishedAt)}

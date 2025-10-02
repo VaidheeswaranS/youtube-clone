@@ -1,12 +1,20 @@
-﻿import React from "react";
+﻿import React, { useEffect } from "react";
 import SideBar from "./SideBar";
-import MainContainer from "./MainContainer";
+import { Outlet } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openToggleMenu } from "../utils/appSlice";
 
 const Body = () => {
+  const dispatcher = useDispatch();
+
+  useEffect(() => {
+    dispatcher(openToggleMenu());
+  }, []);
+
   return (
     <div className="flex flex-row">
       <SideBar />
-      <MainContainer />
+      <Outlet />
     </div>
   );
 };
