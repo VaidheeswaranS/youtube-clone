@@ -8,7 +8,11 @@ import { clearVideoDetails } from "../utils/videosSlice";
 
 const MainContainer = () => {
   const dispatcher = useDispatch();
+
+  // changing the value in redux store to collapse the toggle menu
   dispatcher(openToggleMenu());
+
+  // clearing the video details in redux store once the MainContainer component loads
   dispatcher(clearVideoDetails());
 
   usePopularVideos();

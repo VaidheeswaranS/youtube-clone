@@ -7,3 +7,6 @@ export const YOUTUBE_POPULAR_VIDEO_API =
 export const YOUTUBE_VIDEO_DETAILS_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=" +
   YOUTUBE_API_KEY;
+
+export const YOUTUBE_SEARCH_API =
+  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
